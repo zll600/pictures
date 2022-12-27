@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-12-26T15:19:50.019Z" agent="5.0 (X11)" etag="vLlUMVpfEhTYXTm-q-gT" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-27T23:49:47.951Z" agent="5.0 (X11)" etag="WOhU0qx0NdCNC2tf87xz" version="20.0.1" type="github">
   <diagram id="EeYemYDFPTXqTynd58sL" name="Page-1">
-    <mxGraphModel dx="1386" dy="648" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1386" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -83,7 +83,7 @@
           <mxGeometry x="720" y="1840" width="360" height="290" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-60" value="CleanUpNode" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="200" y="2040" width="240" height="154" as="geometry" />
+          <mxGeometry x="200" y="2040" width="240" height="200" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-61" value="+ function: CleanupFunction&#xa;+ arg1: void*&#xa;+ arg2: void*&#xa;+ next: CleanUpNode*&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="X3R0SZMDiFQFNyOITrhu-60">
           <mxGeometry y="26" width="240" height="94" as="geometry" />
@@ -92,10 +92,22 @@
           <mxGeometry y="120" width="240" height="8" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-63" value="+ IsEmpty() const: bool&#xa;+ Run(): void&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="X3R0SZMDiFQFNyOITrhu-60">
-          <mxGeometry y="128" width="240" height="26" as="geometry" />
+          <mxGeometry y="128" width="240" height="72" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-64" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Cache&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div&gt;&amp;nbsp;+ Cache() =default&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ Cache(const Cache&amp;amp;) =delete&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ operator=(const Cache&amp;amp;) =delete: Cache&amp;amp;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual ~Cache()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ struct Handle {};&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ virtual Insert(const Slice&amp;amp;, void*, size_t, void(*)(const Slice&amp;amp;, void*)) =0: Handle*&lt;/div&gt;&lt;div&gt;+ virtual Lookup(const Slice&amp;amp;) =0: Handle*&lt;/div&gt;&lt;div&gt;+ virtual Release(Handle*) =0: void&lt;/div&gt;&lt;div&gt;+ virtual Value(Handle*) =0: void*&lt;/div&gt;&lt;div&gt;+ virtual Erase(const Slice&amp;amp;) =0: void&lt;/div&gt;&lt;div&gt;+ virtual NewId() =0: uint64_t&lt;/div&gt;&lt;div&gt;+ virtual Prune(): void&lt;/div&gt;&lt;div&gt;+ virtual TotalChange() const =0: size_t&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
           <mxGeometry x="480" y="2160" width="450" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="X3R0SZMDiFQFNyOITrhu-65" value="Status" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="2320" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="X3R0SZMDiFQFNyOITrhu-66" value="- state_: const char*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="X3R0SZMDiFQFNyOITrhu-65">
+          <mxGeometry y="26" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="X3R0SZMDiFQFNyOITrhu-67" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="X3R0SZMDiFQFNyOITrhu-65">
+          <mxGeometry y="52" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="X3R0SZMDiFQFNyOITrhu-68" value="- code() const: Code&#xa;- Status(Code, const Slice&amp;, const Slice&amp;)&#xa;- static CopyState(const char*): const char*&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" vertex="1" parent="X3R0SZMDiFQFNyOITrhu-65">
+          <mxGeometry y="60" width="280" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
