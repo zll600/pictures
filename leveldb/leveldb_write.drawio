@@ -1,1 +1,52 @@
-<mxfile host="app.diagrams.net" modified="2022-12-28T00:17:48.219Z" agent="5.0 (X11)" version="20.0.1" etag="eMHuMXLtTY5xQ864gka6" type="github"><diagram id="pYkzWGA8mSeGU97iOLey">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-12-28T05:47:09.018Z" agent="5.0 (X11)" etag="s9REcwZ7vsdIPZRDLm_J" version="20.0.1" type="github">
+  <diagram id="pYkzWGA8mSeGU97iOLey" name="Page-1">
+    <mxGraphModel dx="1386" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HDf3URYzIl1ITKoJXbYv-1" target="HDf3URYzIl1ITKoJXbYv-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-1" value="Start" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="340" y="110" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HDf3URYzIl1ITKoJXbYv-2" target="HDf3URYzIl1ITKoJXbYv-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-2" value="DB::Write" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="275" y="280" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HDf3URYzIl1ITKoJXbYv-4" target="HDf3URYzIl1ITKoJXbYv-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-4" value="WriteBatchInternal::InsertInto()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="257.5" y="400" width="265" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HDf3URYzIl1ITKoJXbYv-5" target="HDf3URYzIl1ITKoJXbYv-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-5" value="WriteBatch::Iterate()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="257.5" y="520" width="265" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HDf3URYzIl1ITKoJXbYv-6" target="HDf3URYzIl1ITKoJXbYv-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-6" value="WriteBatch::Handler::Put()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="257.5" y="640" width="265" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HDf3URYzIl1ITKoJXbYv-7" target="HDf3URYzIl1ITKoJXbYv-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-7" value="MemTable::Put()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="257.5" y="760" width="265" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-8" value="SkipList&amp;lt;const char*, KeyComparator&amp;gt;::Insert()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="257.5" y="880" width="265" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="HDf3URYzIl1ITKoJXbYv-32" value="log::Writer::AddRecord(const Slice&amp;amp;)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="640" y="400" width="265" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
