@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-03T13:54:09.213Z" agent="5.0 (X11)" etag="67qQ98EwdtoYJINl6Qia" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-03T14:57:07.969Z" agent="5.0 (X11)" etag="-OsIgkuNhtcJDiv93K39" version="20.0.1" type="github">
   <diagram id="EeYemYDFPTXqTynd58sL" name="Page-1">
     <mxGraphModel dx="3086" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -112,7 +112,7 @@
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-1" value="DBmpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="425" y="2800" width="290" height="234" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-2" value="- mutex_: port::Mutex&#xa;&#xa;- background_work_finish_signal_: port::CondVar&#xa;- mem_: MemTable*&#xa;- imm_: MemTable*&#xa;- has_imm_: std::atomic&lt;bool&gt;&#xa;- logfile_: WritableFile*&#xa;- logfile_number_: uint64_t&#xa;- log_: log::Writer*&#xa;- writers_: std::deque&lt;Writers*&gt;- bg_error_: Status&#xa;- versions_: VersionSet* const&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-1">
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-2" value="- mutex_: port::Mutex&#xa;&#xa;- background_work_finish_signal_: port::CondVar&#xa;- mem_: MemTable*&#xa;- imm_: MemTable*&#xa;- has_imm_: std::atomic&lt;bool&gt;&#xa;- logfile_: WritableFile*&#xa;- logfile_number_: uint64_t&#xa;- log_: log::Writer*&#xa;- writers_: std::deque&lt;Writers*&gt;- bg_error_: Status&#xa;- versions_: VersionSet* const&#xa;- manual_compaction_: ManualCompaction*&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-1">
           <mxGeometry y="26" width="290" height="174" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-1">
@@ -246,6 +246,18 @@
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-66" value="+ explicit Node(const Key&amp;)&#xa;+ Next(int): Node*+ SetNext(int, Node*): void&#xa;+ NoBarrier_Next(int): void&#xa;+ NoBarrier_SetNext(int, Node*): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-63">
           <mxGeometry y="88" width="290" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-70" value="VersionEdit" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-360" y="3440" width="360" height="274" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-71" value="- comparator_: std::string&#xa;- log_number: uint64_t&#xa;- prev_log_number_: uint64_t&#xa;- next_file_number_: uint64_t&#xa;- last_sequence_: SequenceNumber&#xa;- has_comparator_: bool&#xa;- has_log_number_: bool&#xa;- has_prev_log_number_: bool&#xa;- has_next_file_number_: bool&#xa;- has_last_sequence_: bool&#xa;- compact_pointers_: std::vector&lt;std::pair&lt;int, InternalKey&gt;&gt;&#xa;- deleted_files_: DeletedFileSet&#xa;- new_files_: std::vector&lt;std::pair&lt;int, FileMetaData&gt;&gt;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-70">
+          <mxGeometry y="26" width="360" height="214" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-72" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-70">
+          <mxGeometry y="240" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-73" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-70">
+          <mxGeometry y="248" width="360" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
