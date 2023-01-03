@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-01-02T08:51:55.386Z" agent="5.0 (X11)" etag="EGHBxZZ5oBR4bS4wP0em" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-03T13:53:57.388Z" agent="5.0 (X11)" etag="SGwr8E8Xj3zSi95yuIOo" version="20.0.1" type="github">
   <diagram id="pYkzWGA8mSeGU97iOLey" name="Page-1">
-    <mxGraphModel dx="1386" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3086" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -14,6 +14,9 @@
           <mxGeometry x="340" y="110" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="HDf3URYzIl1ITKoJXbYv-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="HDf3URYzIl1ITKoJXbYv-2" target="HDf3URYzIl1ITKoJXbYv-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HDf3URYzIl1ITKoJXbYv-2" target="zUjJbxAkN1TlkHFBeBEU-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="HDf3URYzIl1ITKoJXbYv-2" value="DB::Write()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
@@ -48,6 +51,33 @@
         </mxCell>
         <mxCell id="HDf3URYzIl1ITKoJXbYv-32" value="log::Writer::AddRecord(const Slice&amp;amp;)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="640" y="280" width="265" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zUjJbxAkN1TlkHFBeBEU-2" target="zUjJbxAkN1TlkHFBeBEU-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zUjJbxAkN1TlkHFBeBEU-2" target="zUjJbxAkN1TlkHFBeBEU-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zUjJbxAkN1TlkHFBeBEU-2" target="zUjJbxAkN1TlkHFBeBEU-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zUjJbxAkN1TlkHFBeBEU-2" target="zUjJbxAkN1TlkHFBeBEU-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-2" value="DBImpl::MakeRoomForWrite(bool)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-490" y="400" width="265" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-5" value="Env::SleepForMicorSeconds(int)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-900" y="520" width="265" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-7" value="break" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-600" y="520" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-9" value="background_work_finished_signal_.Wait()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="520" width="265" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-11" value="NewWritableFile" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-330" y="520" width="230" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
