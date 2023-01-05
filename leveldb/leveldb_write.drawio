@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-03T14:57:16.200Z" agent="5.0 (X11)" etag="0PotwfXMFp46xbCHrIka" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-05T10:49:55.900Z" agent="5.0 (X11)" etag="Ms_hK-IGVkKeEziz4mgh" version="20.0.1" type="github">
   <diagram id="pYkzWGA8mSeGU97iOLey" name="Page-1">
     <mxGraphModel dx="3086" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -112,6 +112,9 @@
         <mxCell id="zUjJbxAkN1TlkHFBeBEU-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zUjJbxAkN1TlkHFBeBEU-17" target="zUjJbxAkN1TlkHFBeBEU-26">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zUjJbxAkN1TlkHFBeBEU-17" target="zUjJbxAkN1TlkHFBeBEU-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="zUjJbxAkN1TlkHFBeBEU-17" value="DBImpl::BackgroundCompaction" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="-150" y="960" width="250" height="50" as="geometry" />
         </mxCell>
@@ -119,7 +122,22 @@
           <mxGeometry x="-530" y="960" width="250" height="50" as="geometry" />
         </mxCell>
         <mxCell id="zUjJbxAkN1TlkHFBeBEU-26" value="DBImpl::CompactMemTable()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="1060" width="250" height="50" as="geometry" />
+          <mxGeometry x="-320" y="1080" width="250" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zUjJbxAkN1TlkHFBeBEU-29" target="zUjJbxAkN1TlkHFBeBEU-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-29" value="DBImpl::DoCompaction" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1080" width="250" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zUjJbxAkN1TlkHFBeBEU-31" target="zUjJbxAkN1TlkHFBeBEU-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-31" value="DBImpl::CleanupCompaction" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1200" width="250" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zUjJbxAkN1TlkHFBeBEU-33" value="DBImpl::RemoveObsoleteFiles" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1320" width="250" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
