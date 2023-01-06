@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-06T13:34:49.979Z" agent="5.0 (X11)" etag="8Wt2Vbm6m77msdEu8u-0" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-06T15:05:51.988Z" agent="5.0 (X11)" etag="b5kMz5lRi-yNvb-C4FsG" version="20.0.1" type="github">
   <diagram id="EeYemYDFPTXqTynd58sL" name="Page-1">
     <mxGraphModel dx="3159" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -194,16 +194,16 @@
           <mxGeometry x="-280" y="2630" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-45" value="MemTable" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="-280" y="2920" width="420" height="168" as="geometry" />
+          <mxGeometry x="-280" y="2900" width="400" height="200" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-46" value="- comparator_: KeyComparator&#xa;- refs_: int&#xa;- arena_: Arena&#xa;- table_: Table&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-45">
-          <mxGeometry y="26" width="420" height="64" as="geometry" />
+          <mxGeometry y="26" width="400" height="64" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-47" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-45">
-          <mxGeometry y="90" width="420" height="8" as="geometry" />
+          <mxGeometry y="90" width="400" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-48" value="+ Add(SequenceNumber, ValueType, const Slice&amp;, const Slice&amp;)&#xa;+ Get(const LookupKey&amp;, std::string*, Status*)&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-45">
-          <mxGeometry y="98" width="420" height="70" as="geometry" />
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-48" value="+ MemTable(const InternalKeyComparator&amp;)&#xa;+ Ref(): void&#xa;+ Unref(): void&#xa;+ Add(SequenceNumber, ValueType, const Slice&amp;, const Slice&amp;)&#xa;+ Get(const LookupKey&amp;, std::string*, Status*)&#xa;+ ApproxmateMemoryUsage(): size_t&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-45">
+          <mxGeometry y="98" width="400" height="102" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dqxAGnpXM77EKVzPfXeZ-54" target="dqxAGnpXM77EKVzPfXeZ-46">
           <mxGeometry relative="1" as="geometry" />
