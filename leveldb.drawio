@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-01-05T13:33:07.286Z" agent="5.0 (X11)" etag="1EDOWmImv70R2lA8EB-h" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-06T13:34:49.979Z" agent="5.0 (X11)" etag="8Wt2Vbm6m77msdEu8u-0" version="20.0.1" type="github">
   <diagram id="EeYemYDFPTXqTynd58sL" name="Page-1">
-    <mxGraphModel dx="3331" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3159" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="X3R0SZMDiFQFNyOITrhu-1" value="Snapshot" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="200" y="160" width="140" height="52" as="geometry" />
+          <mxGeometry x="760" y="1120" width="140" height="52" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-2" value="# ~Snapshot(): virtual" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="X3R0SZMDiFQFNyOITrhu-1" vertex="1">
           <mxGeometry y="26" width="140" height="26" as="geometry" />
@@ -23,7 +23,7 @@
           <mxGeometry y="88" width="240" height="72" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-14" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;DB&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;~ static Status Open(const Option&amp;amp;, const std::string&amp;amp;, DB **dbptr)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ DB() =default;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ DB(const DB&amp;amp;) =delete;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ DB&amp;amp; operator=(const DB&amp;amp;) =delete;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual ~DB();&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Put(const WriteOptions&amp;amp;, const Slice&amp;amp;, const Slice&amp;amp;) = 0: Status&lt;/p&gt;&lt;div&gt;+ virtual Delete(const WriteOptions&amp;amp;, const Slice&amp;amp;) = 0; Status&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ virtual Write(const WriteOptions&amp;amp;, const WriteBatch*); Status&lt;/div&gt;&lt;div&gt;+ virtual Get(const ReadOptions&amp;amp;, const Slice&amp;amp;, std::string*) = 0: Status&lt;/div&gt;&lt;div&gt;+ virtual NewIterator(const ReadOptions&amp;amp;) = 0; Status&lt;/div&gt;&lt;div&gt;+ virtual GetSnapshot() =0: const Snapshot*&lt;/div&gt;&lt;div&gt;+ virtual ReleaseSnapshot(const Snapshot*) =0: void&lt;/div&gt;&lt;div&gt;+ virtual GetProperty(const Slice&amp;amp;, std::string*) =0: bool&lt;/div&gt;&lt;div&gt;+ virtual GetApproximateSizes(const Range*, int n, uint64_t*) =0: void&lt;/div&gt;&lt;div&gt;+ virtual CompactRange(const Slice*, const Slice*) =0: void&lt;br&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="640" y="160" width="440" height="320" as="geometry" />
+          <mxGeometry x="320" y="2220" width="440" height="320" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-15" value="CompressionType" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="200" y="480" width="140" height="78" as="geometry" />
@@ -59,31 +59,31 @@
           <mxGeometry x="200" y="1080" width="320" height="200" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-33" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;RandomAccessFile&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ RandomAccessFile()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ RandomAccessFile(const RandomAccessFile&amp;amp;) =delete&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ operator=(const RandomAccessFile&amp;amp;) RandomAccessFile&amp;amp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual ~RandomAccessFile()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ virtual Read(size_t, size_t, Slice*, char*) =0: Status&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="200" y="1320" width="320" height="200" as="geometry" />
+          <mxGeometry x="-150" y="1330" width="320" height="200" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-53" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;WritableFile&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ WritableFile()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ WritableFile(const WritableFile&amp;amp;) =delete&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ operator=(const WritableFile&amp;amp;) WritableFile&amp;amp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual ~WritableFile()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ virtual Append() =0: Status&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual Close() =0: Status&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual Flush() =0: Status&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual Sync() =0: Status&lt;br&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="560" y="1320" width="320" height="240" as="geometry" />
+          <mxGeometry x="1325" y="1440" width="320" height="240" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-54" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Logger&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Logger() =default&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Logger(const Logger&amp;amp;) =delete&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ operator=(const Logger&amp;amp;) Logger&amp;amp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual ~Logger()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;div&gt;&amp;nbsp;+ virtual Logv(const char*, std::va_list) =0: Status&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
           <mxGeometry x="920" y="1320" width="320" height="200" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-55" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;FileLock&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ FileLock() =default&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ FileLock(const FileLock&amp;amp;) =delete&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ operator=(const FileLock&amp;amp;) Logger&amp;amp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual ~FileLock()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="200" y="1640" width="280" height="160" as="geometry" />
+          <mxGeometry x="-170" y="1570" width="280" height="160" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-56" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;EnvWrapper&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- target_: Env*&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp;+ explicit EnvWrapper(Env*)&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual ~EnvWrapper()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ target() const: Env*&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;u&gt;+ static Default(): Env*&lt;/u&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ NewSequentialFile(const std::string&amp;amp;, SequentialFile **) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ NewRandomAccessFile(const std::string&amp;amp;, RandomAccessFile**) =0: Status&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ NewWritableFile(const std::string&amp;amp;, WritableFile**) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ NewAppendableFile(const std::string&amp;amp;, WritableFile**) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ FileExists(const std::string&amp;amp;) =0: bool&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ GetChildren(const std::string&amp;amp;, std::vector&amp;lt;std::string&amp;gt;*) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual RemoveFile(const std::string) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual DeleteFile(const std::string&amp;amp;) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual CreateDir(const std::string&amp;amp;) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual RemoveDir(const std::string&amp;amp;) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual DeleteDir(const std::string&amp;amp;) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual GetFileSize(const std::string&amp;amp;, uint64_t*) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual RenameFile(const std::string&amp;amp;, const std::string&amp;amp;) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual LockFile(const std::string&amp;amp;, FileLock**) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual UnlockFile(FileLock*) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Schedule(void (*function)(void*), void*) =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual StartThread(void (*function)(void*), void*) =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual GetTestDirectory(std::string*) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual NewLogger(const std::string&amp;amp;, Logger**) =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual NowMicros() =0: uint64_t&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual SleepForMicroseconds() =0: void&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
           <mxGeometry x="1480" y="640" width="480" height="520" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-57" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Comparator&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div&gt;&amp;nbsp;+ virtual Compare(const Slice&amp;amp;, const Slice&amp;amp;) const =0: int&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual Name() const =0: const char*&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual FindShortestSeparator(std::string*, const Slice&amp;amp;) const =0: void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual FindShortestSuccessor(std::string*) const =0: void&lt;br&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="560" y="1640" width="440" height="160" as="geometry" />
+          <mxGeometry x="230" y="1540" width="440" height="160" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-58" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;FilterPolicy&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div&gt;&amp;nbsp;+ virtual Compare(const Slice&amp;amp;, const Slice&amp;amp;) const =0: int&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual ~FilterPolicy()&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual Name() cosnt =0: const char*&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual CreateFilter(const Slice*, int, std::string) const =0: void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual KeyMayMatch(const Slice&amp;amp;, const Slice&amp;amp; filter) const =0: void&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ &lt;br&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="200" y="1840" width="440" height="160" as="geometry" />
+          <mxGeometry x="-260" y="1790" width="440" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="X3R0SZMDiFQFNyOITrhu-59" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;Iterator&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ cleanup_head_: CleanUpNode&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Iterator()&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Iterator(const Iterator&amp;amp;) =delete&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ operator=(const Iterator&amp;amp;) Logger&amp;amp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual ~Iterator()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Valid() const: bool&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual SeekToFirst() =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual SeekToLast() =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Seek(const Slice&amp;amp;) =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Next() =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Prev() =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual key() const =0: Slice&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual value() const =0: Slice&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual status() cosnt =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ RegisterCleanup(CleanupFunction, void*, void*): void&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="720" y="1840" width="360" height="290" as="geometry" />
+        <mxCell id="X3R0SZMDiFQFNyOITrhu-59" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;&lt;i&gt;Iterator&lt;/i&gt;&amp;gt;&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ cleanup_head_: CleanUpNode&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Iterator()&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Iterator(const Iterator&amp;amp;) =delete&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ operator=(const Iterator&amp;amp;) Logger&amp;amp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual ~Iterator()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Valid() const: bool&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual SeekToFirst() =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual SeekToLast() =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Seek(const Slice&amp;amp;) =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Next() =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Prev() =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual key() const =0: Slice&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual value() const =0: Slice&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual status() cosnt =0: Status&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ RegisterCleanup(CleanupFunction, void*, void*): void&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1400" y="1740" width="360" height="290" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-60" value="CleanUpNode" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="200" y="2040" width="240" height="200" as="geometry" />
+          <mxGeometry x="-170" y="1990" width="240" height="200" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-61" value="+ function: CleanupFunction&#xa;+ arg1: void*&#xa;+ arg2: void*&#xa;+ next: CleanUpNode*&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="X3R0SZMDiFQFNyOITrhu-60" vertex="1">
           <mxGeometry y="26" width="240" height="94" as="geometry" />
@@ -95,10 +95,10 @@
           <mxGeometry y="128" width="240" height="72" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-64" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Cache&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;+ field2: Type&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;div&gt;&amp;nbsp;+ Cache() =default&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ Cache(const Cache&amp;amp;) =delete&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ operator=(const Cache&amp;amp;) =delete: Cache&amp;amp;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ virtual ~Cache()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ struct Handle {};&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ virtual Insert(const Slice&amp;amp;, void*, size_t, void(*)(const Slice&amp;amp;, void*)) =0: Handle*&lt;/div&gt;&lt;div&gt;+ virtual Lookup(const Slice&amp;amp;) =0: Handle*&lt;/div&gt;&lt;div&gt;+ virtual Release(Handle*) =0: void&lt;/div&gt;&lt;div&gt;+ virtual Value(Handle*) =0: void*&lt;/div&gt;&lt;div&gt;+ virtual Erase(const Slice&amp;amp;) =0: void&lt;/div&gt;&lt;div&gt;+ virtual NewId() =0: uint64_t&lt;/div&gt;&lt;div&gt;+ virtual Prune(): void&lt;/div&gt;&lt;div&gt;+ virtual TotalChange() const =0: size_t&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="480" y="2160" width="450" height="320" as="geometry" />
+          <mxGeometry x="1495" y="2070" width="450" height="320" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-65" value="Status" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="80" y="2320" width="280" height="130" as="geometry" />
+          <mxGeometry x="-200" y="2260" width="280" height="130" as="geometry" />
         </mxCell>
         <mxCell id="X3R0SZMDiFQFNyOITrhu-66" value="- state_: const char*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="X3R0SZMDiFQFNyOITrhu-65" vertex="1">
           <mxGeometry y="26" width="280" height="26" as="geometry" />
@@ -109,17 +109,20 @@
         <mxCell id="X3R0SZMDiFQFNyOITrhu-68" value="- code() const: Code&#xa;- Status(Code, const Slice&amp;, const Slice&amp;)&#xa;- static CopyState(const char*): const char*&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" parent="X3R0SZMDiFQFNyOITrhu-65" vertex="1">
           <mxGeometry y="60" width="280" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-1" value="DBmpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="360" y="2800" width="360" height="310" as="geometry" />
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dqxAGnpXM77EKVzPfXeZ-1" target="X3R0SZMDiFQFNyOITrhu-14">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-2" value="- mutex_: port::Mutex&#xa;&#xa;- background_work_finish_signal_: port::CondVar&#xa;- mem_: MemTable*&#xa;- imm_: MemTable*&#xa;- has_imm_: std::atomic&lt;bool&gt;&#xa;- logfile_: WritableFile*&#xa;- logfile_number_: uint64_t&#xa;- log_: log::Writer*&#xa;- writers_: std::deque&lt;Writers*&gt;- bg_error_: Status&#xa;- snapshots_: SnapshotList&#xa;- versions_: VersionSet* const&#xa;- manual_compaction_: ManualCompaction*&#xa;- &#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-1">
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-1" value="DBmpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="2800" width="360" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-2" value="- mutex_: port::Mutex&#xa;&#xa;- background_work_finish_signal_: port::CondVar&#xa;- mem_: MemTable*&#xa;- imm_: MemTable*&#xa;- has_imm_: std::atomic&lt;bool&gt;&#xa;- logfile_: WritableFile*&#xa;- logfile_number_: uint64_t&#xa;- log_: log::Writer*&#xa;- writers_: std::deque&lt;Writers*&gt;- bg_error_: Status&#xa;- snapshots_: SnapshotList&#xa;- pending_outputs_: std::set&lt;uint64_t&gt;&#xa;&#xa;- versions_: VersionSet* const- manual_compaction_: ManualCompaction*&#xa;- &#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-1">
           <mxGeometry y="26" width="360" height="214" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-1">
           <mxGeometry y="240" width="360" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-4" value="+ Write(const WriteOptions&amp;, WriteBatch*)&#xa;+ MakeInputIterator(Compaction*): Iterator*&#xa;+ FinishCompactionOutputFile(CompactionState*, Iterator*)&#xa;+ &#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-1">
-          <mxGeometry y="248" width="360" height="62" as="geometry" />
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-4" value="+ Write(const WriteOptions&amp;, WriteBatch*)&#xa;+ MakeInputIterator(Compaction*): Iterator*&#xa;+ FinishCompactionOutputFile(CompactionState*, Iterator*)&#xa;+ CleanupCompaction(CompactionState*)&#xa;+ RemoveObsoleteFiles&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-1">
+          <mxGeometry y="248" width="360" height="112" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-5" value="DBImpl::Writer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="1035" y="2606" width="240" height="144" as="geometry" />
@@ -149,7 +152,7 @@
           <mxGeometry y="118" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-26" value="WriteBatch" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry y="2757" width="280" height="200" as="geometry" />
+          <mxGeometry y="2520" width="280" height="200" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-27" value="+ rep_: std::string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-26">
           <mxGeometry y="26" width="280" height="26" as="geometry" />
@@ -161,7 +164,7 @@
           <mxGeometry y="60" width="280" height="140" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-30" value="WriteBatchInternal" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="-20" y="2635" width="160" height="86" as="geometry" />
+          <mxGeometry x="-240" y="2500" width="160" height="86" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-31" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-30">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
@@ -176,7 +179,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-38" value="MemTableInsert" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="-480" y="2750" width="220" height="140" as="geometry" />
+          <mxGeometry x="-600" y="2620" width="220" height="140" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-39" value="+ sequence_: SequenceNumber&#xa;+ mem_: Memtable*&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-38">
           <mxGeometry y="26" width="220" height="54" as="geometry" />
@@ -188,25 +191,25 @@
           <mxGeometry y="88" width="220" height="52" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-42" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;WriteBatch::Handler&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ field1: Type&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ~Handler()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Put(const Slice&amp;amp;, const Slice&amp;amp;) =0: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ virtual Delete(const Slice&amp;amp;) =0: void&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-230" y="2760" width="190" height="120" as="geometry" />
+          <mxGeometry x="-280" y="2630" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-45" value="MemTable" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="-620" y="3000" width="430" height="86" as="geometry" />
+          <mxGeometry x="-280" y="2920" width="420" height="168" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-46" value="- comparator_: KeyComparator&#xa;- refs_: int&#xa;- arena_: Arena&#xa;- table_: Table&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-45">
-          <mxGeometry y="26" width="430" height="26" as="geometry" />
+          <mxGeometry y="26" width="420" height="64" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-47" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-45">
-          <mxGeometry y="52" width="430" height="8" as="geometry" />
+          <mxGeometry y="90" width="420" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-48" value="+ Add(SequenceNumber, ValueType, const Slice&amp;, const Slice&amp;)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-45">
-          <mxGeometry y="60" width="430" height="26" as="geometry" />
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-48" value="+ Add(SequenceNumber, ValueType, const Slice&amp;, const Slice&amp;)&#xa;+ Get(const LookupKey&amp;, std::string*, Status*)&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-45">
+          <mxGeometry y="98" width="420" height="70" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dqxAGnpXM77EKVzPfXeZ-54" target="dqxAGnpXM77EKVzPfXeZ-46">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-54" value="MemTable::KeyComparator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="-920" y="2814" width="400" height="86" as="geometry" />
+          <mxGeometry x="-670" y="2780" width="400" height="86" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-55" value="+ comparator_: InternalKeyComparator" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-54">
           <mxGeometry y="26" width="400" height="26" as="geometry" />
@@ -220,8 +223,11 @@
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dqxAGnpXM77EKVzPfXeZ-59" target="dqxAGnpXM77EKVzPfXeZ-46">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dqxAGnpXM77EKVzPfXeZ-59" target="dqxAGnpXM77EKVzPfXeZ-131">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-59" value="SkipList" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="-800" y="3190" width="160" height="86" as="geometry" />
+          <mxGeometry x="-630" y="3100" width="160" height="86" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-60" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-59">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
@@ -235,8 +241,11 @@
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dqxAGnpXM77EKVzPfXeZ-63" target="dqxAGnpXM77EKVzPfXeZ-60">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dqxAGnpXM77EKVzPfXeZ-63" target="dqxAGnpXM77EKVzPfXeZ-131">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-63" value="SkipList::Node" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="-1210" y="3200" width="290" height="160" as="geometry" />
+          <mxGeometry x="-1010" y="3059" width="290" height="160" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-64" value="+ key: Key const&#xa;&#xa;- next_[1]: std::atomic&lt;Node*&gt;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-63">
           <mxGeometry y="26" width="290" height="54" as="geometry" />
@@ -259,29 +268,29 @@
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-73" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-70">
           <mxGeometry y="248" width="360" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-74" value="Version" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="80" y="3440" width="520" height="400" as="geometry" />
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-74" value="VersionSet" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="3980" width="510" height="460" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-75" value="- prev_log_number_: uint64_t&#xa;- next_file_number_: uint64_t&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-74">
-          <mxGeometry y="26" width="520" height="214" as="geometry" />
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-75" value="- env_: Env* const&#xa;- dbname_: const std::string&#xa;- options_: const Options*&#xa;- icmp_: const InternalKeyComparator&#xa;&#xa;- prev_log_number_: uint64_t&#xa;- next_file_number_: uint64_t- manifest_file_number_: uint64_t&#xa;- last_sequence_: uint64_t&#xa;&#xa;- log_number_: uint64_t&#xa;- description_file_: WritableFile*&#xa;- description_log_: log::Writer*&#xa;- dummy_versions_: Version&#xa;- current_: Version*&#xa;&#xa;- compact_pointer_: std::string[config::kNumLevels]&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-74">
+          <mxGeometry y="26" width="510" height="234" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-76" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-74">
-          <mxGeometry y="240" width="520" height="8" as="geometry" />
+          <mxGeometry y="260" width="510" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-77" value="+ VersionSet(const std::string&amp;, const Options*, TableCache*, const InternalComparator)&#xa;+ VersionSet(const VersionSet&amp;) =delete:&#xa;+ operator=(const VersionSet&amp;) =delete: VersionSet&amp;&#xa;+ ~VersionSet()&#xa;&#xa;+ NewFileNumber(): uint64_t&#xa;+ NumLevelFiles(int) const: int&#xa;+ PrevLogNumber() const: uint64_t&#xa;+ CompactRange(int level, const InternalKey*, const InternalKey*): Compaction*&#xa;+ PickCompaction(): Compaction*&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-74">
-          <mxGeometry y="248" width="520" height="152" as="geometry" />
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-77" value="+ VersionSet(const std::string&amp;, const Options*, TableCache*, const InternalComparator)&#xa;+ VersionSet(const VersionSet&amp;) =delete:&#xa;+ operator=(const VersionSet&amp;) =delete: VersionSet&amp;&#xa;+ ~VersionSet()&#xa;&#xa;+ ManifestFileNumber() const: uint64_t&#xa;+ NewFileNumber(): uint64_t&#xa;+ NumLevelFiles(int) const: int+ LogNumber() const: uint64_t&#xa;+ LastSequence() const: uint64_t&#xa;+ PrevLogNumber() const: uint64_t&#xa;+ CompactRange(int level, const InternalKey*, const InternalKey*): Compaction*&#xa;+ PickCompaction(): Compaction*&#xa;+ AddLiveFiles(std::set&lt;uint64_t&gt;*): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-74">
+          <mxGeometry y="268" width="510" height="192" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-78" value="Compaction" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="640" y="3440" width="370" height="360" as="geometry" />
+          <mxGeometry x="680" y="4480" width="360" height="400" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-79" value="- comparator_: std::string&#xa;- log_number: uint64_t&#xa;- prev_log_number_: uint64_t&#xa;- next_file_number_: uint64_t&#xa;- last_sequence_: SequenceNumber&#xa;- has_comparator_: bool&#xa;- has_log_number_: bool&#xa;- has_prev_log_number_: bool&#xa;- has_next_file_number_: bool&#xa;- has_last_sequence_: bool&#xa;- compact_pointers_: std::vector&lt;std::pair&lt;int, InternalKey&gt;&gt;&#xa;- deleted_files_: DeletedFileSet&#xa;- new_files_: std::vector&lt;std::pair&lt;int, FileMetaData&gt;&gt;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-78">
-          <mxGeometry y="26" width="370" height="214" as="geometry" />
+          <mxGeometry y="26" width="360" height="214" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-80" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-78">
-          <mxGeometry y="240" width="370" height="8" as="geometry" />
+          <mxGeometry y="240" width="360" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-81" value="-  Compaction(const Option*, int)&#xa;+ Compaction()&#xa;+ level() const: int&#xa;+ edit(): VersionEdit*&#xa;+ num_input_files(int) const: int&#xa;+ input(int, int) const: FileMetaData*&#xa;+ IsTrivalMove() const: bool&#xa;+ ShouldStopBefore(const Slice&amp;): bool&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-78">
-          <mxGeometry y="248" width="370" height="112" as="geometry" />
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-81" value="-  Compaction(const Option*, int)&#xa;+ ~Compaction()&#xa;&#xa;+ level() const: int+ edit(): VersionEdit*&#xa;+ num_input_files(int) const: int&#xa;+ input(int, int) const: FileMetaData*&#xa;+ IsTrivalMove() const: bool&#xa;+ ShouldStopBefore(const Slice&amp;): bool&#xa;+ IsBaseLevelForKey(const Slice&amp;): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-78">
+          <mxGeometry y="248" width="360" height="152" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-82" value="DBImpl::CompactionState" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="1035" y="3000" width="290" height="240" as="geometry" />
@@ -323,16 +332,127 @@
           <mxGeometry y="118" width="320" height="162" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-95" value="TableCache" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="1480" y="3440" width="390" height="240" as="geometry" />
+          <mxGeometry x="1480" y="3440" width="380" height="200" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-96" value="+ number: uint64_t&#xa;+ file_size: uint64_t&#xa;+ smallest: InternalKey&#xa;+ largest: InternalKey&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-95">
-          <mxGeometry y="26" width="390" height="84" as="geometry" />
+          <mxGeometry y="26" width="380" height="84" as="geometry" />
         </mxCell>
         <mxCell id="dqxAGnpXM77EKVzPfXeZ-97" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-95">
-          <mxGeometry y="110" width="390" height="8" as="geometry" />
+          <mxGeometry y="110" width="380" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="dqxAGnpXM77EKVzPfXeZ-98" value="+ TableCache(const std::string&amp;, const Options&amp;, int)&#xa;+ NewIterator(const ReadOptions&amp;, uint64_t, uint64_t, Table**) &#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-95">
-          <mxGeometry y="118" width="390" height="122" as="geometry" />
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-98" value="+ TableCache(const std::string&amp;, const Options&amp;, int)&#xa;&#xa;+ NewIterator(const ReadOptions&amp;, uint64_t, uint64_t, Table**) &#xa;+ Evict(uint64_t): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-95">
+          <mxGeometry y="118" width="380" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-100" value="SnapshotList" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="405" y="3300" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-101" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-100">
+          <mxGeometry y="26" width="270" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-102" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-100">
+          <mxGeometry y="52" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-103" value="+ SnapshotList()&#xa;&#xa;+ empty() const: bool&#xa;+ oldest() const: SnapshotImpl*&#xa;+ newest() const: SnapshotImpl*&#xa;+ New(SequenceNumber): SnapshotImpl&#xa;+ Delete(const SnapshotImpl*): void&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-100">
+          <mxGeometry y="60" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dqxAGnpXM77EKVzPfXeZ-104" target="dqxAGnpXM77EKVzPfXeZ-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-104" value="SnapshotImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="3560" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-105" value="- prev_: SnapshotImpl*&#xa;- next_: SnapshotImpl*&#xa;- sequence_number_: SequenceNumber&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-104">
+          <mxGeometry y="26" width="280" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-106" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-104">
+          <mxGeometry y="80" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-107" value="+ SnapshotImpl(SequenceNumber)&#xa;&#xa;+ sequence_number() cosnt: SequenceNumber&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-104">
+          <mxGeometry y="88" width="280" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-112" value="Version" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="780" y="3980" width="520" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-113" value="- vset_: VersionSet*&#xa;- next_: Version*&#xa;- prev_: Version*&#xa;- refs_: int&#xa;- files_: std::vector&lt;FileMetaData*&gt;[config::kNumLevels]&#xa;- file_to_compact_: int&#xa;- file_to_compact_level_: int &#xa;&#xa;- compaction_score_: double&#xa;- compaction_level_: int&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-112">
+          <mxGeometry y="26" width="520" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-114" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-112">
+          <mxGeometry y="180" width="520" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-115" value="+ VersionSet(const std::string&amp;, const Options*, TableCache*, const InternalComparator)&#xa;+ VersionSet(const VersionSet&amp;) =delete:&#xa;+ operator=(const VersionSet&amp;) =delete: VersionSet&amp;&#xa;+ ~VersionSet()&#xa;&#xa;+ ManifestFileNumber() const: uint64_t&#xa;+ NewFileNumber(): uint64_t&#xa;+ NumLevelFiles(int) const: int+ LogNumber() const: uint64_t&#xa;+ LastSequence() const: uint64_t&#xa;+ PrevLogNumber() const: uint64_t&#xa;+ CompactRange(int level, const InternalKey*, const InternalKey*): Compaction*&#xa;+ PickCompaction(): Compaction*&#xa;+ AddLiveFiles(std::set&lt;uint64_t&gt;*): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-112">
+          <mxGeometry y="188" width="520" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-117" value="Version::GetStats" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="4040" width="170" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-118" value="- seek_file: FileMetaData*&#xa;- seek_file_level: int&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-117">
+          <mxGeometry y="26" width="170" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-119" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-117">
+          <mxGeometry y="80" width="170" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-120" value="+ " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-117">
+          <mxGeometry y="88" width="170" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-121" value="LookupKey" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="770" y="3300" width="270" height="228" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-122" value="- start_: const char*&#xa;- kstart_: const char*&#xa;- end_: const char*&#xa;- space_: char[200]&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-121">
+          <mxGeometry y="26" width="270" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-123" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-121">
+          <mxGeometry y="100" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-124" value="+ LookupKey(const Slice&amp;, SequenceNumber)&#xa;&#xa;+ memtable_key() const: Slice&#xa;+ internal_key() const: Slice&#xa;+ user_key() const: Slice&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-121">
+          <mxGeometry y="108" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-126" value="MemTable::KeyComparator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-280" y="3160" width="320" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-127" value="- comparator_: const InternalKeyComparator" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-126">
+          <mxGeometry y="26" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-128" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-126">
+          <mxGeometry y="52" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-129" value="+ KeyComparator(const InternalKeyComparator&amp;)&#xa;+ operator()(const char*, const char*): int&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-126">
+          <mxGeometry y="60" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-131" value="SkipList::Iterator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-790" y="3280" width="210" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-132" value="- list_: const SkipList*&#xa;- node_: Node*&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-131">
+          <mxGeometry y="26" width="210" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-133" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-131">
+          <mxGeometry y="60" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-134" value="+ Iterator(const SkipList*)&#xa;+ Valid() const: bool&#xa;+ key() const: const Key&amp;&#xa;+ Next(): void&#xa;+ Prev(): void&#xa;+ Seek(const Key&amp;): void&#xa;+ SeekToFirst(): void&#xa;+ SeekToLast(): void&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-131">
+          <mxGeometry y="68" width="210" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-137" value="InternalKeyComparator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="4560" width="400" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-138" value="- user_comparator_: const Comparator*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-137">
+          <mxGeometry y="26" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-139" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-137">
+          <mxGeometry y="52" width="400" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-140" value="+ InternalKeyComparator(const Comparator*)&#xa;+ Name() const override: const char*&#xa;+ Compare(const Slice&amp;, const Slice&amp;): int&#xa;+ FindShortestSeparator(std::string*, const Slice&amp;)&#xa;+ FindShortSuccessor(std::string*): void&#xa;+ user_comparator() const: const Comparator*&#xa;+ Compare(const InternalKey&amp;, const InternalKey&amp;) const: int&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-137">
+          <mxGeometry y="60" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-141" value="FileMetaData" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="4240" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-142" value="- refs: int&#xa;- allowed_seeks: int&#xa;- number: uint64_t&#xa;- file_size: uint64_t&#xa;- smallest: InternalKey&#xa;- largest: InternalKey&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-141">
+          <mxGeometry y="26" width="200" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-143" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-141">
+          <mxGeometry y="120" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dqxAGnpXM77EKVzPfXeZ-144" value="+ " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dqxAGnpXM77EKVzPfXeZ-141">
+          <mxGeometry y="128" width="200" height="32" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
