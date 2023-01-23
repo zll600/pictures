@@ -1,1 +1,49 @@
-<mxfile host="app.diagrams.net" modified="2023-01-23T11:23:28.116Z" agent="5.0 (X11)" version="20.8.10" etag="-FAyF5_IPNf02AhpV8bW" type="github"><diagram name="Page-1" id="2M7a-m1pDqCJDfNh2dUW">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-01-23T11:46:02.506Z" agent="5.0 (X11)" etag="7oMiWPVau2e3o-io3zYl" version="20.8.10" type="github">
+  <diagram name="Page-1" id="2M7a-m1pDqCJDfNh2dUW">
+    <mxGraphModel dx="1434" dy="719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UFjKp2_8JiAH9D37bFZ7-1" target="UFjKp2_8JiAH9D37bFZ7-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-1" value="RoseDB::Get()" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="342.5" y="70" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UFjKp2_8JiAH9D37bFZ7-2" target="UFjKp2_8JiAH9D37bFZ7-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-2" value="RoseDB::getVal()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="200" width="165" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UFjKp2_8JiAH9D37bFZ7-4" target="UFjKp2_8JiAH9D37bFZ7-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-4" value="AdaptiveRadixTree::Get()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="282.5" y="320" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UFjKp2_8JiAH9D37bFZ7-6" target="UFjKp2_8JiAH9D37bFZ7-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-6" value="RoseDB::getActiveLogFile()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="282.5" y="440" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-8" value="RoseDB::getArchivedLogFile()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="720" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UFjKp2_8JiAH9D37bFZ7-9" target="UFjKp2_8JiAH9D37bFZ7-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UFjKp2_8JiAH9D37bFZ7-9" target="UFjKp2_8JiAH9D37bFZ7-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-9" value="logFile.Fid != idxNode.fid" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="332.5" y="560" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="UFjKp2_8JiAH9D37bFZ7-12" value="RoseDB::ReadLogEntry()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="282.5" y="840" width="240" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
