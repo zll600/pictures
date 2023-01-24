@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-24T05:24:43.990Z" agent="5.0 (X11)" etag="Ay9RYyCG0SWgDECj6ro2" version="20.8.10" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-24T14:19:50.104Z" agent="5.0 (X11)" etag="9CN_jTQMhacinFMZ9kod" version="20.8.10" type="github">
   <diagram name="Page-1" id="EITTPEvfillpvw8KD1b1">
     <mxGraphModel dx="2284" dy="719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -27,6 +27,9 @@
         </mxCell>
         <mxCell id="s2k4OPSogU_Jf_F92xD9-6" value="RoseDB::loadIndexFromLogFiles()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="240" y="480" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="s2k4OPSogU_Jf_F92xD9-8" target="s2k4OPSogU_Jf_F92xD9-20">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="s2k4OPSogU_Jf_F92xD9-8" value="RoseDB::handleLogFileGC()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="280" y="600" width="200" height="40" as="geometry" />
@@ -57,6 +60,33 @@
         </mxCell>
         <mxCell id="s2k4OPSogU_Jf_F92xD9-18" value="RoseDB::buildStrsIndex()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="-80" y="960" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2k4OPSogU_Jf_F92xD9-20" target="s2k4OPSogU_Jf_F92xD9-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-20" value="RoseDB::doRunGC()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="720" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2k4OPSogU_Jf_F92xD9-22" target="s2k4OPSogU_Jf_F92xD9-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-22" value="RoseDB::ReadLogEntry()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="840" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2k4OPSogU_Jf_F92xD9-24" target="s2k4OPSogU_Jf_F92xD9-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-24" value="mybeRewriteXXX()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="960" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2k4OPSogU_Jf_F92xD9-26" target="s2k4OPSogU_Jf_F92xD9-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-26" value="mybeRewriteXXX()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1080" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-28" value="discards::clear()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1200" width="200" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
