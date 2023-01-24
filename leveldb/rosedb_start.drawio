@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-01-24T01:22:15.738Z" agent="5.0 (X11)" etag="jyF7IuariU6c1ICUlpe1" version="20.8.10" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-24T05:24:43.990Z" agent="5.0 (X11)" etag="Ay9RYyCG0SWgDECj6ro2" version="20.8.10" type="github">
   <diagram name="Page-1" id="EITTPEvfillpvw8KD1b1">
-    <mxGraphModel dx="1434" dy="719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2284" dy="719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -30,6 +30,33 @@
         </mxCell>
         <mxCell id="s2k4OPSogU_Jf_F92xD9-8" value="RoseDB::handleLogFileGC()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="280" y="600" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2k4OPSogU_Jf_F92xD9-10" target="s2k4OPSogU_Jf_F92xD9-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-10" value="RoseDB::loadIndexFromLogFiles()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="240" y="480" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2k4OPSogU_Jf_F92xD9-11" target="s2k4OPSogU_Jf_F92xD9-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-11" value="iteratorAndHandle()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="600" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2k4OPSogU_Jf_F92xD9-14" target="s2k4OPSogU_Jf_F92xD9-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-14" value="LogFile::ReadLogEntry()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="720" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2k4OPSogU_Jf_F92xD9-16" target="s2k4OPSogU_Jf_F92xD9-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-16" value="RoseDB::buildIndex()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="840" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2k4OPSogU_Jf_F92xD9-18" value="RoseDB::buildStrsIndex()" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="960" width="200" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
